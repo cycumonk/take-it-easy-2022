@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/all.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <h1>JS Change img</h1>
+            <div class="col-4">
+                <button class="show-btn btn">
+                    <img class="w-100 sm-img" src="../media/img/0-lg.jpg" alt="0-sm.jpg">
+                </button>
+                <button class="show-btn btn">
+                    <img class="w-100 sm-img" src="../media/img/1-lg.jpg" alt="1-sm.jpg">
+                </button>
+                <button class="show-btn btn">
+                    <img class="w-100 sm-img" src="../media/img/2-lg.jpg" alt="2-sm.jpg">
+                </button>
+            </div>
+            <div class="col-8">
+                <img  class="lg-img w-100 btn" src="" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const showBtn = document.querySelectorAll(".show-btn");
+        const smImg = document.querySelectorAll(".sm-img");
+        const lgImg = document.querySelectorAll(".lg-img");
+
+        for (let i = 0; i < showBtn.length; i++) {
+            showBtn[i].addEventListener("click",showFunction);
+            function showFunction(){
+                const smSrc = smImg[i].src;
+                lgImg[0].src = smSrc
+            }
+        }
+    </script>
+
+</body>
+
+</html>
