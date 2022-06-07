@@ -7519,7 +7519,7 @@ fieldset:disabled .btn {
     display: -webkit-box;
     overflow: hidden !important;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
 }
 
 .vr {
